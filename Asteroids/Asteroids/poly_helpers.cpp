@@ -3,6 +3,7 @@
 #include <cmath> 
 #include "point2d.h"
 #include "poly_helpers.h"
+#include "particle.h"
 #include <iostream>
 #include <time.h>
 #include <stdlib.h>
@@ -54,13 +55,10 @@ bool pn_poly(point2d point, vector<point2d> points) {
 
 	size_t i, j, nvert = points.size();
 	bool c = false;
-
-
 	for (i = 0, j = nvert - 1; i < nvert; j = i++) {
 		if (((points[i].y >= point.y) != (points[j].y >= point.y)) &&
 			(point.x <= (points[j].x - points[i].x) * (point.y - points[i].y) / (points[j].y - points[i].y) + points[i].x)
 			)
-
 			c = !c;
 	}
 	return c;
@@ -77,6 +75,19 @@ bool collision(vector<point2d>poly1, vector<point2d> poly2)
 	}
 	return 0;
 }
+
+bool collision(particle p, vector<point2d> poly2)
+{
+	bool status = false;
+	point2d tmp;
+	tmp.x = p.x;
+	tmp.y = p.y;
+	
+		status = pn_poly(tmp, poly2);
+		if (status) return 1;
+		else return 0;
+}
+
 
 vector<point2d> random_polygon()
 {
