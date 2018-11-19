@@ -32,7 +32,6 @@ object::object(float x, float y, float vx, float vy, vector<point2d> vertices, f
 
 void object::rotate(float r)
 {
-	;
 	float s = sin(r);
 	float c = cos(r);
 	for (int i = 0; i < this->vcount; i++) {
@@ -83,6 +82,18 @@ float * object::to_array()
 	{
 		arr[i * 2] = (vertices[i].x + pos.x) - (*rel_x);
 		arr[(i * 2) + 1] = (vertices[i].y + pos.y) - (*rel_y);
+	}
+	return arr;
+}
+
+
+float * object::to_mov_array(float x, float y)
+{
+	float * arr = new float[vcount * 2];
+	for (int i = 0; i < vertices.size(); i++)
+	{
+		arr[i * 2] = ((vertices[i].x + pos.x) - (*rel_x))+x;
+		arr[(i * 2) + 1] = ((vertices[i].y + pos.y) - (*rel_y))+y;
 	}
 	return arr;
 }

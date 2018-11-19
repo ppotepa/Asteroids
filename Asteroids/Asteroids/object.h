@@ -29,6 +29,7 @@ public:
 	object(float x, float y, float vx, float vy, vector<point2d> vertices, float rot, float scale, float const_rotation);
 	void rotate(float angle);
 	void move();
+	float * to_mov_array(float x, float y);
 	void dorot();
 	void calc_rel();
 	object();

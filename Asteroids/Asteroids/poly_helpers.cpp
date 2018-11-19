@@ -81,7 +81,22 @@ bool collision(vector<point2d>poly1, vector<point2d> poly2)
 vector<point2d> random_polygon()
 {
 	vector<point2d> random;
-	float x0 = 50.0, y0 = 50.0, r = rand() % 20;
+	float x0 = 50.0, y0 = 50.0, r = rand() % 120;
+	float a, x, y;
+	for (a = 0.0; a < 2.0 * M_PI;)
+	{
+		x = x0 + (r*cos(a));
+		y = y0 + (r*sin(a));
+		a += (20.0 + (rand() % 80)*M_PI) / 180.0;
+		random.push_back({ x, y });
+	}
+	return random;
+}
+
+vector<point2d> random_polygon(float radius, float x0, float y0)
+{
+	vector<point2d> random;
+	float r = rand() % 3;;
 	float a, x, y;
 	for (a = 0.0; a < 2.0 * M_PI;)
 	{
