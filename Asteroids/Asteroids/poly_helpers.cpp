@@ -67,7 +67,6 @@ bool pn_poly(point2d point, vector<point2d> points) {
 bool collision(vector<point2d>poly1, vector<point2d> poly2)
 {
 	bool status = false;
-
 	for (unsigned int i = 0; i < poly1.size(); i++)
 	{
 		status = pn_poly(poly1[i], poly2);
@@ -76,15 +75,15 @@ bool collision(vector<point2d>poly1, vector<point2d> poly2)
 	return 0;
 }
 
-bool collision(particle p, vector<point2d> poly2)
+bool collision(particle p, object& o)
 {
 	bool status = false;
 	point2d tmp;
 	tmp.x = p.x;
 	tmp.y = p.y;
 	
-		status = pn_poly(tmp, poly2);
-		if (status) return 1;
+		status = pn_poly(tmp, o.get_translation());
+		if (status) { o.hp -= 10; return 1; }
 		else return 0;
 }
 

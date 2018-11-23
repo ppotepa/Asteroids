@@ -7,7 +7,7 @@
 using namespace std;
 class object
 {
-public:
+	public:
 
 	int vcount;
 	float x, y, vx, vy, rot, scale;
@@ -15,7 +15,7 @@ public:
 	float const_rotation;
 	float  * rel_x, *rel_y;
 	float rel_distance;
-
+	int hp;
 
 	ALLEGRO_COLOR color;
 

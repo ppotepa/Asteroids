@@ -18,6 +18,7 @@ object::object(float x, float y, float vx, float vy, vector<point2d> vertices, f
 	this->scale = scale;
 	this->vcount = vertices.size();
 	this->const_rotation = const_rotation;
+	this->hp = 100;
 
 	for (int i = 0; i < vcount; i++) {
 		this->vertices.push_back(vertices[i]);
@@ -89,12 +90,12 @@ float * object::to_array()
 
 float * object::to_mov_array(float x, float y)
 {
-	float * arr = new float[vcount * 2];
+	float arr[100];
 	for (int i = 0; i < vertices.size(); i++)
 	{
 		arr[i * 2] = ((vertices[i].x + pos.x) - (*rel_x))+x;
 		arr[(i * 2) + 1] = ((vertices[i].y + pos.y) - (*rel_y))+y;
-	}
+	}	
 	return arr;
 }
 
