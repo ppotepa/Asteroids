@@ -47,8 +47,6 @@ In **2007**, after a 10-year hiatus from programming, I wrote my first Asteroids
 
 - **Fixed shapes** vs. **procedural polygons**: The original used hard-coded vertices; now shapes are generated at runtime.  
 - **No particle effects** vs. **full particle system**: 2007 version had no thrust/explosion particles.  
-- **Frame-rate-dependent input** vs. **smooth, decoupled update loop**: Key handling was tied to frame rate; now logic and rendering are separated.  
-- **Single rendering path** vs. **multiple back-ends**: Original used software blitting; new version supports Allegro software and Direct3D.  
 
 ---
 
