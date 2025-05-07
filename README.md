@@ -42,7 +42,6 @@ Watch a quick play-through of the current implementation:
 ## How This Differs from My 2007 Version
 
 In **2007**, after a 10-year hiatus from programming, I wrote my first Asteroids clone using basic keyboard input, fixed-shape geometry, and a rudimentary game loop:
-
 ** CLICK TO DIVE BACK IN TIME INTO 2006 YOUTUBE**
 [![My 2007 Asteroids approach](https://img.youtube.com/vi/KdhjOEiZ8jY/0.jpg)](https://www.youtube.com/watch?v=KdhjOEiZ8jY)
 
