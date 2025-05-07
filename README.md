@@ -21,7 +21,7 @@ A lightweight, 2D vector-based clone of the classic **Asteroids** arcade game, w
 
 ## Demo
 
-Watch a quick play-through of the current implementation:
+Watch a quick play-through of the current implementation :
 
 [![Asteroids remake (Allegro 5/C++)](https://img.youtube.com/vi/4pxsWMEwXTQ/0.jpg)](https://www.youtube.com/watch?v=4pxsWMEwXTQ)
 
@@ -43,9 +43,10 @@ Watch a quick play-through of the current implementation:
 
 In **2007**, after a 10-year hiatus from programming, I wrote my first Asteroids clone using basic keyboard input, fixed-shape geometry, and a rudimentary game loop:
 
-**CLICK TO DIVE BACK IN TIME INTO 2006 YOUTUBE**
+**CLICK TO DIVE BACK IN TIME INTO 2006 YOUTUBE ▶️**
+**DIVE INTO YOUTUBE LIKE IT WAS 2006▶️** 
 
-[![My 2007 Asteroids approach](https://img.youtube.com/vi/KdhjOEiZ8jY/0.jpg)](https://www.youtube.com/watch?v=KdhjOEiZ8jY)
+[![My 2007 Asteroids approach](https://github.com/user-attachments/assets/f0f94f69-919c-45f4-a6d9-a6e76f3ff1d4)](https://www.youtube.com/watch?v=KdhjOEiZ8jY)
 
 
 - **Fixed shapes** vs. **procedural polygons**: The original used hard-coded vertices; now shapes are generated at runtime.  
